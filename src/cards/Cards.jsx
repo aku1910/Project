@@ -1,22 +1,27 @@
-import React from 'react'
+import React from 'react';
+import './Card.css';
 
-const Cards = () => {
-  return (
-    <>
-    <div className='cards flex gap-7  justify-center'>
-        <div className='  card1 pt-[10%] pl-[40px]'>
-            <h1 className='text-[30px] pb-[10px] font-semibold'>Any day Offers</h1>
-            <p className='text-[18px] font-light'>Suspendisse Faucibus Sed</p>
-            <button className='font-bold text-[17px] pt-[20px]'>SHOP NOW</button>
+const Suspendise = () => {
+    return (
+        <div className='suspendisecontain'>
+            <div className='leftsuspendisecontain'>
+                <div className='leftdescription'>
+                    <h1 className='text-[30px]'>Any Day Offers</h1>
+                    <p>Suspendise Faucibus Sed</p>
+                    <span className='text-[20px]'>Shop Now</span>
+                </div>
+                <div className='leftover'></div>
+            </div>
+            <div className='rightsuspendisecontain'>
+                <div className='leftdescription'>
+                    <h1 className='text-[30px]'>Other Flavors</h1>
+                    <p>Suspendise Faucibus Sed</p>
+                    <span className='text-[20px]'>Shop Now</span>
+                </div>
+                <div className='rightover'></div>
+            </div>
         </div>
-        <div className='  card2 pt-[10%] pl-[40px]'>
-            <h1 className='text-[30px] pb-[10px] font-semibold'>Any day Offers</h1>
-            <p className='text-[18px] font-light'>Suspendisse Faucibus Sed</p>
-            <button className='font-bold text-[17px] pt-[20px]'>SHOP NOW</button>
-        </div>
-    </div>
-    </>
-  )
+    );
 }
 
-export default Cards
+export default Suspendise;

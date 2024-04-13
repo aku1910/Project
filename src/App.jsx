@@ -10,8 +10,13 @@ import Multislider from './multislider/Multislider'
 import Cards from './cards/Cards'
 import Layout from './component/Layout/Layout';
 import Products from './Products';
-import { BasketSlice } from './Slice/BasketSlice';
-import { Store } from './Store';
+import { Provider } from 'react-redux'; 
+import { Store } from './Store'; 
+import Section5 from './Section5';
+import Section6 from './Section6';
+import Section7 from './section7';
+import Section8 from './section8';
+
 
 const SliderData = [
   {
@@ -26,22 +31,27 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="shop" element={<Shop />} />
-            <Route path="featured" element={<Featured />} />
-            <Route path="pages" element={<Pages />} />
-            <Route path="blogs" element={<Blogs />} />
-          </Routes>
-        <ImageSlider slides={SliderData} /> 
-        <Multislider/>
-        <Cards />
-        <Products/>
-        <BasketSlice />
-        <Store/>
-        </Layout>
+        <Provider store={Store}> 
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="shop" element={<Shop />} />
+              <Route path="featured" element={<Featured />} />
+              <Route path="pages" element={<Pages />} />
+              <Route path="blogs" element={<Blogs />} />
+            </Routes>
+            <ImageSlider slides={SliderData} /> 
+            <Multislider/>
+            <Cards />
+            <Products/>
+            <Section5/>
+            <Section6 />
+            <Section7/>
+            <Section8/>
+          </Layout>
+        </Provider>
       </BrowserRouter>
+      
     </>
   );
 }

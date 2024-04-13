@@ -1,10 +1,11 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import './section8.css'
 const responsive = {
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3,
+        items: 5,
         slidesToSlide: 2
     },
     tablet: {
@@ -20,31 +21,37 @@ const responsive = {
 };
 const sliderImageUrl = [
     {
-        url: "https://fone-store-demo.myshopify.com/cdn/shop/files/ba3.png?v=1660639419",
-        name: "Ham Sandwich",
-        price:"It is a long established fact that a reader ."
+        url: "https://fone-store-demo.myshopify.com/cdn/shop/files/instagram1.jpg?v=5369563179917895542",
+
     },
     {
-        url: "https://fone-store-demo.myshopify.com/cdn/shop/files/ba2.png?v=1660639531",
-        name: "Hamburger Veggie",
-        price:"It is a long established fact that a reader ."
+        url: "https://fone-store-demo.myshopify.com/cdn/shop/files/instagram2.jpg?v=5369563179917895542",
+
     },
     {
-        url: "https://fone-store-demo.myshopify.com/cdn/shop/files/ba4.png?v=1660639419",
-        name: "Sushi Sashimi",
-        price:"It is a long established fact that a reader ."
+        url: "https://fone-store-demo.myshopify.com/cdn/shop/files/instagram3.jpg?v=5369563179917895542",
+
     },
     {
-        url: "https://fone-store-demo.myshopify.com/cdn/shop/files/ba1.png?v=1660639419",
-        name:"Pepperoni Pizza",
-        price:"It is a long established fact that a reader ."
+        url: "https://fone-store-demo.myshopify.com/cdn/shop/files/instagram4.jpg?v=5369563179917895542",
+
     },
+    {
+        url: "https://fone-store-demo.myshopify.com/cdn/shop/files/instagram5.jpg?v=5369563179917895542",
+
+    },
+    {
+        url: "https://fone-store-demo.myshopify.com/cdn/shop/files/instagram6.jpg?v=5369563179917895542",
+
+    },
+
 ];
 
 const Slider = () => {
     return (
         <div className="parent">
-            <h1 className="flex justify-center  mb-[55px] text-[25px] font-semibold">VISIT OUR STORE </h1>
+            <h1 className="flex justify-center   text-[25px] font-semibold">FONE ON INSTAGRAM</h1>
+            <p style={{color:"rgb(81,158,34)"}} className="flex justify-center mb-[55px] text-[25px] font-medium">#fone</p>
             <Carousel
                 responsive={responsive}
                 swipeable={true}
@@ -53,16 +60,17 @@ const Slider = () => {
                 partialVisible={false}
                 dotListClass="custom-dot-list-style"
             >
+
                 {sliderImageUrl.map((imageUrl, index) => {
                     return (
-                        <div className="multislider items-center gap-4" key={index}>
+                        <div className="multisliderr " key={index}>
                             <img src={imageUrl.url} />
                             <div>
-                            <h3 className="text-[26px] font-semibold">{imageUrl.name}</h3> 
-                            <p className="text-[17px]">{imageUrl.price}</p>
+                                <h3 className="text-[26px] font-semibold">{imageUrl.name}</h3>
+                                <p className="text-[17px]">{imageUrl.price}</p>
                             </div>
                         </div>
-                    
+
                     );
                 })}
             </Carousel>

@@ -24,13 +24,14 @@ const Product = () => {
       dispatch(addBasket(product))
     }
     return (
-        <div className='products'>
+        
+        <div className='products flex justify-center gap-6 flex-wrap text-center'>
             
                 {data.map((product) => (
                     <p key={product.id}>
-                        <img src={product.ProductImage}/>
-                        <h4>{product.Name}</h4>
-                        <p>{product.Price}</p>
+                        <img className='w-[330px]' src={product.ProductImage}/>
+                        <h4 className='font-semibold'>{product.Name}</h4>
+                        <p className='text-green font-bold'>${product.Price}</p>
                         <button style={{border:"1px solid black" , backgroundColor:"black" , color:"white" , width:"150px", height:"40px"}} onClick={()=>addedBasket(product)}>Add to Basket</button>
                     </p>
                 ))}

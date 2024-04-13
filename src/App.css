@@ -2,10 +2,34 @@
   background-color: white;
 }
 
+.suspendisecontain{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.productbuton{
+  border: 2px solid black;
+  background-Color: white;
+  color: black;
+  width: 150px;
+  height: 40px ; 
+  font-weight: 600;
+}
+.productbuton:hover{
+  background-color: green;
+  color: white;
+  border: 1px solid green;
+  transition: 0.4s;
+}
+
 .menubuton {
   background-color: black;
   color: white;
 
+}
+.lastproduct{
+  padding-top: 60px;
+  padding-bottom: 96px;
 }
 
 .border {
@@ -80,7 +104,7 @@
 .arrows {
   cursor: pointer;
   position: absolute;
-  top: 100%;
+  top: 90%;
   left: 48%;
   color: gray;
   font-size: 30px;
@@ -98,6 +122,7 @@
 }
 
 .multislider {
+
   display: flex;
   justify-content: center;
   border: 1px solid gray;
@@ -195,8 +220,11 @@
     width: 100px;
     height: 30px;
   }
+  
 }
 .border{
+  display: flex;
+  justify-content: space-around;
   border: 1px solid rgb(211, 209, 209);
 }
 
